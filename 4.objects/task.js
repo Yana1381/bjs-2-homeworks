@@ -19,7 +19,16 @@ Student.prototype.addMark = function(mark) {
 }
 
 Student.prototype.getAverage = function () {
- getAverage(this.marks);
+  let sum = 0;
+  for(let i = 0; i < this.marks.length; i++) {
+    sum += this.marks[i];
+    }
+  
+  avg = sum / this.marks.length;
+  //avg = +avg.toFixed(2);
+
+  this.avg = getAverage;
+
 }
 
 let student1 = new Student("Аny", "female", 17);
