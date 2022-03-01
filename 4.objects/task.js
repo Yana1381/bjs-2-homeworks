@@ -30,12 +30,12 @@ Student.prototype.getAverage = function() {
 }
 
 Student.prototype.addMarks = function(mark1, mark2, mark3, ...marks) {
-  this.marks.push(marks);
+  this.marks.push();
 }
 
 Student.prototype.exclude = function(reason) {
-  delete Student.prototype.addMark;
-  delete Student.prototype.setSubject.this.subject;
+  delete this.marks;
+  delete this.subject;
   this.excluded = reason;
   if (this.avg < 3) {
     reason = 'low grades'
@@ -43,14 +43,10 @@ Student.prototype.exclude = function(reason) {
   
 }
 
-let student1 = new Student("Аny", "female", 17);
-student1.setSubject("Algebra");
-student1.addMark(5);
-student1.addMark(4);
-student1.addMark(5);
-console.log(student1.getAverage()); 
-console.log(student1);
-
-//let student2 = new Student("Sony", "male", 20);
-//let student3 = new Student("Bony", "female", 22);
-//let student4 = new Student("Lony", "male", 21);
+let student2 = new Student("Buzz", "female", 35);
+student2.setSubject("Geometry");
+student2.addMark(2);
+student2.addMark(3);
+student2.addMark(2);
+student2.exclude('low grades')
+console.log(student2)
