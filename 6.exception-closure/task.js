@@ -1,3 +1,5 @@
+//Задание 1
+
 function parseCount(value) {
   let parsedValue = Number.parseInt(value);
   if (isNaN(parsedValue)) throw new Error("Невалидное значение");
@@ -6,16 +8,13 @@ function parseCount(value) {
 }
 
 function validateCount(value) {
-  
   try {
-    parseCount(value);
-    if (parsedValue === true) {
-      
-    return parsedValue;
-    }
-  } catch (e) {
-    if (isNaN(parsedValue)) {
-      throw e;
-    } 
+    return parseCount(value);
+  } 
+  catch (e) {
+    return e;
   }
 }
+
+//Задание 2
+
