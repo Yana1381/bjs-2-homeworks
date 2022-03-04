@@ -29,15 +29,14 @@ class Triangle {
   }
 
   getPerimeter() {
-    let perimeter = this.a + this.b + this.c;
-    return perimeter;
+    return this.a + this.b + this.c;
   }
     
   getArea() {
-    let p = (this.a + this.b + this.c) / 2;
+    let p = this.getPerimeter() / 2;
     let S = Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
-	S = +S.toFixed(4);
-    return S;
+    return S = +S.toFixed(3);
+	//в задании 3 знака после точки
   }
 }
 
@@ -46,8 +45,10 @@ function getTriangle(a, b, c) {
     return new Triangle;
   } 
   catch (e) {
-    return new Triangle,
-    getPerimeter(), getArea();
-    console.log('Ошибка! Треугольник не существует');
+	let object = {
+		getPerimeter(){'Ошибка! Треугольник не существует'},
+		getArea(){'Ошибка! Треугольник не существует'}
+		}
+	return object;
   }
 }
