@@ -36,7 +36,6 @@ class Triangle {
     let p = this.getPerimeter() / 2;
     let S = Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
     return S = +S.toFixed(3);
-	//в задании 3 знака после точки
   }
 }
 
