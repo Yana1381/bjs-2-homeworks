@@ -42,12 +42,16 @@ class Triangle {
 
 function getTriangle(a, b, c) {
   try {
-    return new Triangle;
+    return new Triangle(a, b, c);
   } 
   catch (e) {
 	let object = {
-		getPerimeter(){'Ошибка! Треугольник не существует'},
-		getArea(){'Ошибка! Треугольник не существует'}
+		getPerimeter(){
+			return 'Ошибка! Треугольник не существует'
+			},
+		getArea(){
+			return 'Ошибка! Треугольник не существует'
+			}
 		}
 	return object;
   }
