@@ -11,10 +11,10 @@ class PrintEditionItem {
 
     set state(value) {
 		if (value < 0) {
-			this._state === 0;        
+			this._state = 0;        
 		}
 		if (value > 100) {
-			this._state === 100; 
+			this._state = 100; 
 		} 
 		else {
 			this._state = value;
@@ -26,7 +26,7 @@ class PrintEditionItem {
 	}
   
 	fix() {
-		this._state = this._state * 1.5;
+		this.state = this.state * 1.5;
     }
 }
 
@@ -76,7 +76,6 @@ const picknick = new FantasticBook(
 
 
 
-
 //Задание 2
 
 class Library {
@@ -105,8 +104,9 @@ class Library {
     giveBookByName(bookName) {
 		for(let i = 0; i < this.books.length; i++) {
 			if (this.books[i].name === bookName) {
-				delete this.books[i];
-				return this.books[i];			
+				let yourBook = this.books[i];
+				this.books.splice(i,1);
+				return yourBook;			
 			}
     
 		}
